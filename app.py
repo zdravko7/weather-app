@@ -1,8 +1,8 @@
 # app.py
 
-import weather_controller
+#import weather_controller
 
-weather_conditions = weather_controller.print_current_temperature()
+#weather_conditions = weather_controller.print_current_temperature()
 
 from flask import Flask
 
