@@ -10,6 +10,5 @@
             "src":"/(.*)", 
             "dest":"app.py"
         }
-    ],
-    "includeFiles": ["templates", "requirements.txt", "weather_controller.py"]
+    ]
 }
