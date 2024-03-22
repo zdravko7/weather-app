@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return print_current_temperature()
+    return weather_controller.print_current_temperature()
 
 @app.route('/contact', methods=['GET'])
 def contact():
