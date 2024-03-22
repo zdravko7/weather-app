@@ -14,4 +14,5 @@ response = requests.get(url, params=params)
 
 responseJSON = response.json()
 
-print (f'The current temperature is {str(responseJSON['current']['temperature_2m'])}')
+def print_current_temperature():
+    return f'The current temperature is {str(responseJSON['current']['temperature_2m'])}'

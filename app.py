@@ -1,11 +1,14 @@
 # app.py
+
+import weather_controller
+
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return "Homepage"
+    return print_current_temperature()
 
 @app.route('/contact', methods=['GET'])
 def contact():
