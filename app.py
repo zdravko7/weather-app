@@ -17,7 +17,8 @@ response = requests.get(url, params=params)
 responseJSON = response.json()
 
 def print_current_temperature():
-    return f'The current temperature is {str(responseJSON['current']['temperature_2m'])}'
+    return f'The current temperature is {str(responseJSON['current']['temperature_2m'])} °C'
+
 
 
 
@@ -25,13 +26,14 @@ def print_current_temperature():
 
 #weather_conditions = weather_controller.print_current_temperature()
 
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 @app.route('/', methods=['GET'])
 def home():
-    return print_current_temperature()
+    temperature = print_current_temperature()
+    return render_template('home.html', temperature=temperature)
 
 @app.route('/contact', methods=['GET'])
 def contact():
